@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest day02/ --watchAll"
+    "test": "jest day03/ --watchAll"
   },
   "repository": {
     "type": "git",
