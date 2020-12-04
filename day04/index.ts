@@ -76,16 +76,16 @@ export class Passport {
     }
 
     private isValidHairColor (): boolean {
-        return (this.passportMap.has('hcl') && (this.hcl.match(/#(\d|[a-f])+/g) || []).length === 1);
+        return (this.passportMap.has('hcl') && this.hcl.match(/#(\d|[a-f])+/g) !== null);
     }
 
     private isValidEyeColor (): boolean {
         return (this.passportMap.has('ecl') &&
-            (this.ecl.match(/amb|blu|brn|gry|grn|hzl|oth/) || []).length === 1);
+            (this.ecl.match(/amb|blu|brn|gry|grn|hzl|oth/) !== null));
     }
 
     private isValidPassportId (): boolean {
-        return (this.passportMap.has('pid') && (this.pid.match(/\d/g) || []).length === 9)
+        return (this.passportMap.has('pid') && (this.pid.match(/(?<!\d)\d{9}(?!\d)/g) !== null));
     }
 
     private validYearWithinBounds (
