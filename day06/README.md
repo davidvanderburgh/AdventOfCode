@@ -64,6 +64,7 @@ a
 a
 
 b
+
 This list represents answers from five groups:
 
 In the first group, everyone (all 1 person) answered "yes" to 3 questions: a, b, and c.
